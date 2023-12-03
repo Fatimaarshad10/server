@@ -23,5 +23,3 @@ mongoose.connect(process.env.MONGO_URL)
     console.log(error.message);
   });
 
-
-module.exports = app;
