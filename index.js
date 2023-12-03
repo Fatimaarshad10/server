@@ -8,7 +8,7 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use('/student' , studentRoute)
+app.use('/student', studentRoute)
 
 
 // connect with mongodb 
@@ -23,4 +23,5 @@ mongoose.connect(process.env.MONGO_URL)
     console.log(error.message);
   });
 
-  export default app;
+
+module.exports = app;
