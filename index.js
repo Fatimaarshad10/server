@@ -24,3 +24,8 @@ app.listen(PORT, () => {
   .catch((error) => {
     console.log(error.message);
   });
+// index.js
+module.exports = async (req, res) => {
+  // Your serverless function logic here
+  res.status(200).json({ message: 'Hello, world!' });
+};
