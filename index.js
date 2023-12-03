@@ -8,7 +8,7 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use('student' , studentRoute
+app.use(studentRoute
 );
 
 app.get('/user',(req,res)=>{
