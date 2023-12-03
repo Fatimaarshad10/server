@@ -11,12 +11,6 @@ app.use(express.json());
 app.use('/student' , studentRoute)
 
 
-
-
-
-
-
-
 // connect with mongodb 
 mongoose.connect(process.env.MONGO_URL)
   .then(() => {
