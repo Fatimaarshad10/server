@@ -2,10 +2,10 @@ const express = require("express");
 const Student = require('../model/studentSchema')
 const studentRoute = express.Router();
 
-studentRoute.get('/student', async (req, res) => {
+studentRoute.get('/', async (req, res) => {
   try {
     const student = await Student.find({})
-    res.json(student)
+    res.status(200).json({ message: 'Hello, world!'});
   } catch (error) {
     res.json(error)
   }
