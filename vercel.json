@@ -8,8 +8,9 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/student/(.*)",
         "dest": "index.js"
       }
     ]
   }
+  
