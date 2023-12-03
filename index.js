@@ -8,7 +8,7 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use('/' , studentRoute)
+app.use('/student' , studentRoute)
 
 
 // connect with mongodb 
