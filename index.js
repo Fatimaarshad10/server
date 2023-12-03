@@ -8,7 +8,7 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use(studentRoute);
+app.use( studentRoute);
 
 
 const PORT = process.env.PORT || 4000;
@@ -24,8 +24,8 @@ app.listen(PORT, () => {
   .catch((error) => {
     console.log(error.message);
   });
-// index.js
-module.exports = async (req, res) => {
-  // Your serverless function logic here
-  res.status(200).json({ message: 'Hello, world!' });
-};
+// // index.js
+// module.exports = async (req, res) => {
+//   // Your serverless function logic here
+//   res.status(200).json({ message: 'Hello, world!' });
+// };
