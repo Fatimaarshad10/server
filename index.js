@@ -8,12 +8,8 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use(studentRoute
-);
+app.use(studentRoute);
 
-app.get('/user',(req,res)=>{
-  res.json("hello")
-} )
 
 const PORT = process.env.PORT || 4000;
 // connect with mongodb 
