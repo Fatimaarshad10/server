@@ -8,17 +8,16 @@ require("dotenv").config();
 
 // middlewares
 app.use(express.json());
-app.use('/students' , studentRoute);
+app.use('/student' , studentRoute);
 
 
-const PORT = process.env.PORT || 4000;
 // connect with mongodb 
 mongoose.connect(process.env.MONGO_URL)
   .then(() => {
 
 console.log("Mongo Connection Built")
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
+app.listen(process.env.PORT , () => {
+  console.log(`Server listening on http://localhost:${process.env.PORT }`);
 });
   })
   .catch((error) => {

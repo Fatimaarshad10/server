@@ -5,7 +5,7 @@ const studentRoute = express.Router();
 studentRoute.get('/', async (req, res) => {
   try {
     const student = await Student.find({})
-    res.status(200).json({ message: 'Hello, world!'});
+    res.status(200).json(student);
   } catch (error) {
     res.json(error)
   }
@@ -27,24 +27,18 @@ studentRoute.post('/', async (req, res) => {
   }
 
 });
-studentRoute.patch('/:id', async(req,res)=>{
-  try{
+studentRoute.patch('/:id', async (req, res) => {
+  try {
     const studentId = req.params.id
-    const {studentName , age , rollNo} = req.body
+    const { studentName, age, rollNo } = req.body
 
-    const studentUpdate = await Student.findByIdAndUpdate(studentId , {studentName , age , rollNo} ,  { new: true } )
+    const studentUpdate = await Student.findByIdAndUpdate(studentId, { studentName, age, rollNo }, { new: true })
     res.json(studentUpdate)
 
-  }catch(error){
+  } catch (error) {
     res.json(error)
   }
 });
-
-
-
-
-
-
 
 studentRoute.delete('/:id', async (req, res) => {
   try {
