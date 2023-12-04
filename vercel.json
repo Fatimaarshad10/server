@@ -4,7 +4,7 @@
   "functions": {
     "/index.js": {
       "runtime": "nodejs18.x",
-      "memory": 1024,
+      "memory": 2048,  
       "maxDuration": 30
     }
   },

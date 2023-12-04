@@ -12,7 +12,7 @@ studentRoute.get('/', async (req, res) => {
 });
 
 
-studentRoute.post('/', async (req, res) => {
+studentRoute.post('/data', async (req, res) => {
   try {
     const { studentName, age, rollNo } = req.body;
 
